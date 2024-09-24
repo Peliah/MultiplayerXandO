@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="setup"></div>
+        <div class="main" style="display: none;">
+            <div class="turn-indicator"></div>
+            <div class="tiles"></div>
+            <div class="players">
+                <div class="player-div">
+                    <h4>Player 1:</h4>
+                    <div>
+                        <img class="card-face image-back" style="background:#000;" src="./assets/apple.png"
+                            alt="card" />
+                    </div>
+                </div>
+                <div class="player-div">
+                    <h4>Player 2:</h4>
+                    <div>
+                        <img class="card-face image-back" src="./assets/face.png" alt="card" />
+                    </div>
+                </div>
+            </div>
+            <div class="game-modal" style="display: none;">
+                <div class="modal-content">
+                    <img src="" alt="" srcset="">
+                    <h4>Game Over!</h4>
+                    <p></p>
+                    <button class="play-again">Play Again</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="./assets/logoLight.png" height="40" width="40" alt="logo" />
+            <h4>&copy;Peliah</h4>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./src/main.js"></script>
+</body>
+
+</html>

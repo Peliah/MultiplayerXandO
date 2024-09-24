@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "roboto-mono";
+    src: url('../assets/RobotoMono-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "roboto-mono", monospace;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #282c33;
+    color: #abb2bf;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #abb2bf;
+    letter-spacing: 1rem;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Main content styles */
+.main {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Footer styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    padding: 0 40px;
+}
+
+.tiles {
+    width: 600px;
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 190px;
+    border: 2px #abb2bf solid;
+    border-radius: 10px;
+    font-size: 6rem;
+    color: white;
+    background-color: transparent;
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    border: 2px #abb2bf solid;
+}
+
+.player-div {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.game-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    color: #282c33;
+}
+
+.game-modal .modal-content {
+    background-color: #fff;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.game-modal img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+
+.game-modal button {
+    padding: 12px 23px;
+    margin-top: 20px;
+    background-color: #abb2bf;
+    font-weight: 600;
+}
+
+.setup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.setup input,
+.setup button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.setup button {
+    cursor: pointer;
+    background-color: #abb2bf;
+    border: none;
+    color: #282c33;
+    border-radius: 5px;
+}
+
+.setup button:hover {
+    background-color: #8f959e;
+}
+
+.turn-indicator {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 600px) {
+    .tiles {
+        width: 400px;
+        height: 400px;
+        gap: 15px;
+    }
+
+    .tile {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media(max-width: 400px) {
+    .tiles {
+        width: 350px;
+        height: 350px;
+        gap: 15px;
+    }
+
+    .tile {
+        width: 100px;
+        height: 100px;
+    }
+}
