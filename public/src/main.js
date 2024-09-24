@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const socket = io("https://multiplayer-xand-o.vercel.app:3000/");
+    const socket = io("https://multiplayer-xand-o.vercel.app/");
     let username = '';
     let roomId = '';
     let playerSymbol = '';
