@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const socket = io("https://multiplayer-xand-o.vercel.app/");
+    const socket = io("http://multiplayer-xand-o.vercel.app:3000");
     let username = '';
     let roomId = '';
     let playerSymbol = '';
@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     createRoomBtn.addEventListener('click', () => {
+        console.log("create room is clicked");
+
         socket.emit('createRoom', username);
     });
 
